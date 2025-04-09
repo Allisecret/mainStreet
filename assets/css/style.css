@@ -151,6 +151,7 @@ body {
 }
 
 .cta-button {
+    display: inline-block;
     background: -webkit-gradient(linear, left top, right top, from(var(--primary)), to(var(--secondary)));
     background: -o-linear-gradient(left, var(--primary), var(--secondary));
     background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -163,7 +164,7 @@ body {
     transition: all 0.3s ease;
     border: none;
     position: relative;
-    overflow: hidden;
+    overflow: hidden !important;
     z-index: 1;
     -webkit-box-shadow: 0 6px 30px -10px var(--primary);
             box-shadow: 0 6px 30px -10px var(--primary);
@@ -175,6 +176,7 @@ body {
             transform: translateY(-3px);
     -webkit-box-shadow: 0 10px 30px -10px var(--primary);
             box-shadow: 0 10px 30px -10px var(--primary);
+    overflow: hidden !important;
 }
 
 .cta-button::after {
@@ -182,6 +184,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: -webkit-gradient(linear, left top, right top, from(var(--secondary)), to(var(--primary)));
@@ -192,6 +195,7 @@ body {
     -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
     opacity: 0;
+    border-radius: 50rem;
 }
 
 .cta-button:hover::after {
